@@ -16,7 +16,15 @@ def OneSpreadStep(state, adj, mu):
             if state[i] == 1 and state[j] == 0:
                 state_after_spread[j] = int(random.random() < mu)
     return state_after_spread
-                
+
+def OneCureStep(state, index_to_cure, deltait):  
+    state_after_cure = list(state)
+    for i_cured in index_to_cure:
+        if state_after_cure[i_cured] == 1:
+            state_after_cure[i_cured] = int(random.random() < 1-deltait) 
+    return state_after_cure 
+ 
+#%%    
 #adj = CreateTrees(3)
 #print(t)
 #state1 = [1,1,0,0,1,0,0,0,0,0,0,0,0,0,0]

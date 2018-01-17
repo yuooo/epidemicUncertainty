@@ -6,7 +6,6 @@ Created on Fri Jan 12 08:12:49 2018
 """
 
 import numpy as np
-from createTrees import *
 
 def Signal(state, p, q):
     n_nodes = len(state)
